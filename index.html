@@ -3,58 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wellington CS Painters - Bringing Colour to Life</title>
+<title>Wellington CS Painters - Cape Town</title>
 <style>
-body{margin:0;font-family:Arial;background:#f5f5f5}
-.header{position:relative;padding:0}
-.header img.banner{width:100%;height:auto;display:block}
-.header .overlay{position:absolute;bottom:0;left:0;right:0;background:rgba(10,61,98,0.85);color:white;padding:12px;text-align:center}
-.contact{background:#f39c12;padding:15px;text-align:center}
-.contact a{color:black;font-weight:bold;font-size:19px;text-decoration:none;display:block;margin:6px}
-.gallery{padding:10px}
-.gal{margin:15px 0;background:white;border-radius:12px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,0.25)}
-.gal img{width:100%;display:block}
-.gal div{padding:12px;text-align:center;font-weight:bold;background:white;color:#0a3d62}
-h2{color:#0a3d62}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:#fff}
+.header{background:#0a3d62;color:white;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:99}
+.menu-btn{font-size:28px;background:none;border:none;color:white}
+#menu{display:none;position:absolute;top:52px;right:0;background:#0a3d62;width:220px}
+#menu a{display:block;color:white;padding:14px;text-decoration:none;border-bottom:1px solid #144a70}
+#menu.show{display:block}
+.hero{background:linear-gradient(rgba(10,61,98,0.9),rgba(10,61,98,0.8)),url('logo.jpeg');background-size:cover;color:white;text-align:center;padding:70px 20px}
+.hero h1{font-size:30px;margin-bottom:12px}
+.btn{background:#f39c12;color:black;padding:13px 28px;text-decoration:none;font-weight:bold;border-radius:6px;display:inline-block;margin-top:15px}
+.contact-bar{background:#f39c12;text-align:center;padding:16px}
+.contact-bar a{color:black;font-weight:bold;text-decoration:none;display:block;margin:6px;font-size:18px}
+.section{padding:20px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:15px}
+.gallery img{width:100%;height:145px;object-fit:cover;border-radius:8px;border:1px solid #ddd}
+.footer{background:#0a3d62;color:white;text-align:center;padding:25px;margin-top:20px}
 </style>
+<script>
+function toggleMenu(){document.getElementById('menu').classList.toggle('show')}
+</script>
 </head>
 <body>
 
 <div class="header">
-<img class="banner" src="logo.jpeg" alt="Wellington CS Painters Logo">
-<div class="overlay">
-<h1 style="margin:5px 0">Wellington CS Painters</h1>
-<p style="margin:0">Bringing Colour to Life • 084 848 8616</p>
+<div style="font-weight:bold;font-size:18px">Wellington CS Painters</div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<div id="menu">
+<a href="#home" onclick="toggleMenu()">Home</a>
+<a href="#services" onclick="toggleMenu()">Services</a>
+<a href="#gallery" onclick="toggleMenu()">Gallery</a>
+<a href="#contact" onclick="toggleMenu()">Contact</a>
 </div>
 </div>
 
-<div class="contact">
-<a href="tel:0848488616">📞 CALL NOW: 084 848 8616</a>
-<a href="https://wa.me/27848488616">💬 WhatsApp for FREE Quote</a>
+<div class="hero" id="home">
+<h1>Professional Painters in Cape Town</h1>
+<p>Interior • Exterior • Roof • Waterproofing<br>20+ Years Experience • Free Quotes</p>
+<a href="#services" class="btn">LEARN MORE</a>
 </div>
 
-<h2 style="text-align:center">Our Work Gallery</h2>
+<div class="contact-bar" id="contact">
+<a href="tel:0848488616">📞 CALL: 084 848 8616</a>
+<a href="https://wa.me/27848488616">💬 WhatsApp: 084 848 8616</a>
+</div>
+
+<div class="section" id="services">
+<h2 style="color:#0a3d62;text-align:center;margin-bottom:12px">Our Services</h2>
+<p>✓ Interior Painting<br>✓ Exterior Painting<br>✓ Roof Painting<br>✓ Waterproofing & Damp<br>✓ Crack Filling & Priming<br>✓ Bathroom Renovations<br>✓ Wood Floor Sanding<br>✓ High Pressure Cleaning<br>✓ Paving & Boundary Walls</p>
+</div>
+
+<h2 style="color:#0a3d62;text-align:center" id="gallery">Our Work</h2>
 <div class="gallery">
-<div class="gal"><img src="before and after.jpg"><div>Before and After</div></div>
-<div class="gal"><img src="exterior painting.jpg"><div>Exterior Painting</div></div>
-<div class="gal"><img src="gate painted.jpg"><div>Gate Painted</div></div>
-<div class="gal"><img src="paving.jpg"><div>Paving & Driveways</div></div>
-<div class="gal"><img src="Wood floor sanding ,ready for sealer.jpg"><div>Wood Floor Sanding</div></div>
-<div class="gal"><img src="bathrooms done ✅.jpg"><div>Bathrooms Done</div></div>
-<div class="gal"><img src="before and after exterior painting.jpg"><div>Exterior Transformation</div></div>
-<div class="gal"><img src="chimney and boundary wall painting.jpg"><div>Chimney & Walls</div></div>
-<div class="gal"><img src="crack filling ,primer + 2 colour coats.jpg"><div>Crack Filling & Painting</div></div>
-<div class="gal"><img src="high pressure wall wash.jpg"><div>High Pressure Washing</div></div>
-<div class="gal"><img src="inside garage painting.jpg"><div>Garage Painting</div></div>
-<div class="gal"><img src="interior crack filling.jpg"><div>Interior Repairs</div></div>
+<img src="before%20and%20after.jpg">
+<img src="exterior%20painting.jpg">
+<img src="gate%20painting.jpg">
+<img src="paving.jpg">
+<img src="bathrooms%20done%20.jpg">
+<img src="chimney%20and%20boundary%20walls.jpg">
+<img src="crack%20filling%20%2Cpriming.jpg">
+<img src="high%20pressure%20cleaning.jpg">
+<img src="Wood%20floor%20sanding.jpg">
+<img src="inside%20garage%20flouring.jpg">
+<img src="interior%20ceiling%20paint.jpg">
+<img src="logo.jpeg">
 </div>
 
-<div style="background:#0a3d62;color:white;padding:25px;text-align:center">
+<div class="footer">
 <h3>Wellington CS Painters</h3>
-<p>📍 Serving All Cape Town - 7945<br>
-📞 084 848 8616<br>
-✉️ Free Quotes • 20+ Years Experience<br><br>
-<strong>Bringing Colour to Life!</strong></p>
+<p>📍 Serving All Cape Town - 7945<br>📞 084 848 8616<br>✉️ Bringing Colour to Life!</p>
 </div>
 
 </body>
